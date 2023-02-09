@@ -45,8 +45,7 @@ import com.example.cupcake.ui.components.FormattedPriceLabel
 fun OrderSummaryScreen(
     orderUiState: OrderUiState,
     onCancelButtonClicked: () -> Unit = {},
-    //onSendButtonClicked: (String, String)-> Unit = { s: String, s1: String -> },
-    onSendButtonClicked: (String, String) -> Unit = { s: String, s1: String -> },
+   onSendButtonClicked: (String, String) -> Unit,
     modifier: Modifier = Modifier
 ){
     val resources = LocalContext.current.resources
@@ -104,10 +103,3 @@ fun OrderSummaryScreen(
     }
 }
 
-@Preview
-@Composable
-fun OrderSummaryPreview(){
-    OrderSummaryScreen(
-        orderUiState = OrderUiState(0, "Test", "Test", "$300.00"),
-    )
-}

@@ -67,7 +67,7 @@ fun StartOrderScreen(
         quantityOptions.forEach { item ->
             SelectQuantityButton(
                 labelResourceId = item.first,
-                onClick = { onNextButtonClicked }
+                onClick = { onNextButtonClicked(item.second) }
             )
         }
     }
